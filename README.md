@@ -70,7 +70,7 @@ The latest production build (APK) is available via GitHub Releases.
 
   ### 📬 Contact & Support
 
-  <a href="https://t.me/saceviewer"><img src="img/telegram.png" width="16" height="16" style="vertical-align: -4px;"></a> [Join our Telegram Channel](https://t.me/saceviewer)
+  <a href="https://t.me/saceasset"><img src="img/telegram.png" width="16" height="16" style="vertical-align: -4px;"></a> [Join our Telegram Channel](https://t.me/saceasset)
   <br />
   <a href="mailto:saceviewer@gmail.com"><img src="img/mail.png" width="16" height="16" style="vertical-align: -4px;"></a> [Send an Email](mailto:saceviewer@gmail.com)
 
