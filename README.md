@@ -3,7 +3,7 @@
 # Sace
 
 <p>
-  <img src="https://img.shields.io/badge/Release-v1.0.0-blue?style=for-the-badge" alt="Release"> &nbsp;
+  <img src="https://img.shields.io/badge/Release-v5.0.0-blue?style=for-the-badge" alt="Release"> &nbsp;
   <img src="https://img.shields.io/badge/Platform-Android-1F6F44?style=for-the-badge&logo=android&logoColor=white" alt="Platform"> &nbsp;
   <img src="https://img.shields.io/badge/Engine-UE4%20%2F%20UE5-8B0000?style=for-the-badge&logo=unrealengine&logoColor=white" alt="UE Support">
 </p>
