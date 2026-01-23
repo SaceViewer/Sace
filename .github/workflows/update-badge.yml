@@ -2,12 +2,15 @@ name: Update User Count Badge
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Her saat başı
-  workflow_dispatch:  # Manuel tetikleme
+    - cron: '0 0 * * *' 
+  workflow_dispatch: 
 
 jobs:
   update-badge:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
     steps:
       - uses: actions/checkout@v4
       
@@ -16,15 +19,15 @@ jobs:
         run: |
           COUNT=$(curl -s https://api.counterapi.dev/v1/sace-viewer/users | jq '.count')
           echo "count=$COUNT" >> $GITHUB_OUTPUT
+          echo "User count: $COUNT"
           
       - name: Update README badge
         run: |
           sed -i "s/Users-[0-9]*-/Users-${{ steps.get-count.outputs.count }}-/" README.md
           
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update user count: ${{ steps.get-count.outputs.count }}"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Update user count: ${{ steps.get-count.outputs.count }}" && git push)
